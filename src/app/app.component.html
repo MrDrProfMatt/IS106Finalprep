@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary" class="main-nav">
   <button mat-raised-button [routerLink]="['/orders']" routerLinkActive="active">Orders</button>
-  <button mat-raised-button>Help</button>
+  <button mat-raised-button (click)="showHelpText()">Help</button>
 </mat-toolbar>
 <div class="main-grid">
   <div class="left-sidebar"></div>
@@ -9,11 +9,11 @@
   <div class="right-sidebar"></div>
 </div>
 <app-flex-modal #flex1
-  [transition]="'slide-in-right'"  
+  [transition]="'slide-in-right'"
   [modalStyle]="{'border':'5px solid #CCC'}"
-  [showToolbar]="true" 
-  [showDefaultAction]="false" 
-  [modalID]="'about-modal'" 
+  [showToolbar]="true"
+  [showDefaultAction]="false"
+  [modalID]="'about-modal'"
   [width]="'815px'"
   [height]="'auto'">
   <span class="modal-title">Information</span>
